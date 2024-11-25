@@ -2,15 +2,21 @@
 @import "@/styles/typography";
 @import "@/styles/variables";
 
+
+
+
 .header {
   position: fixed;
   width: 100%;
   z-index: 10;
-  backdrop-filter: blur(10px);
   transition: 0.5s ease;
   height: 100px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  will-change: backdrop-filter;
 
   .container {
+    position: relative;
     display: flex;
     gap: 54px;
     align-items: center;

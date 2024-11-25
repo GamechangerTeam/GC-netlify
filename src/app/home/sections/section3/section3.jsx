@@ -20,7 +20,7 @@ export default function Section3() {
           </p>
           <div className="section3__footer__btns">
             <ButtonText>Отзывы</ButtonText>
-            <ButtonText>Кейсы</ButtonText>
+            <ButtonText popup="cases">Кейсы</ButtonText>
           </div>
         </div>
       </div>

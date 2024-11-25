@@ -14,6 +14,8 @@ export default function Button({
   const handleClick = () => {
 
     if (popup) {
+      console.log(popup);
+      
       openPopup(popup);
     }
 

@@ -1,11 +1,32 @@
-// import "./button.scss"
-export default function ButtonText({children, className, onClick,  active, disabled   }) {
-  
+"use client";
+import { useModal } from "../hooks/use-modal-store";
 
-    return (
-      <button className={`button-text ${className} ${active ? "active" : ""}`} onClick={onClick} disabled={disabled}>
-        {children}
-      </button>
-    );
-  }
-  
+export default function ButtonText({
+  children,
+  className,
+  onClick,
+  active,
+  disabled,
+  popup,
+}) {
+  const { openPopup } = useModal();
+
+  const handleClick = () => {
+    if (popup) {
+      openPopup(popup);
+    }
+    if (onClick) {
+      onClick();
+    }
+  };
+
+  return (
+    <button
+      className={`button-text ${className} ${active ? "active" : ""}`}
+      onClick={handleClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+}

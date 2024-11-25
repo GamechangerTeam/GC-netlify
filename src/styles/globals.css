@@ -1,6 +1,24 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+:root {
+  --line-height-h1: 144px;
+  --line-height-h2: 110px;
+
+  --h1: 120px;
+  --h2: 100px;
+  --h3: 80px;
+  --h2-price: 72px;
+  --XXL: 48px;
+  --XL: 32px;
+  --L: 24px;
+  --M: 20px;
+  --S: 16px;
+  --main: #d3c879;
+  --XS: 14px;
+  --XXS: 12px;
+}
 
 * {
   box-sizing: border-box;
@@ -16,17 +34,13 @@ main {
 }
 
 @media (max-width: 1024px) {
-  
 }
 
-body {
-  background-image: url("/images/bg-1.jpg");
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-}
 
-button, a, input[type=file] {
+
+button,
+a,
+input[type="file"] {
   cursor: pointer;
 }
 

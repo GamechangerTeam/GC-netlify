@@ -1,4 +1,5 @@
 
+"use client"
 import React, { useState,useEffect } from 'react'
 import "./BitrixInfoListBlock.scss"
 import Image from 'next/image';

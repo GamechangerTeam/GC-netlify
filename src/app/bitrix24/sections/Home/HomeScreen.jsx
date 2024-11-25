@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import MainTitle from '../../components/home-components/main-title/MainTitle'
 import './HomeScreen.scss'

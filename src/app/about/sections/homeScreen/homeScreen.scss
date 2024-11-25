@@ -1,0 +1,77 @@
+@import "@/styles/mixins";
+@import "@/styles/typography";
+@import "@/styles/variables";
+
+.home-screen {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    &__title {
+        font-family: Manrope;
+        color: rgba(255, 255, 255, 1);
+        font-size: 72px;
+        font-weight: 400;
+        line-height: 93.6px;
+        text-align: center;
+        
+        @include pc {
+            font-size: 64px;
+            line-height: 83.2px;
+        }
+
+        @include laptop {
+            font-size: 56px;
+            line-height: 72.8px;
+        }
+
+        @include tablet {
+            font-size: 48px;
+            line-height: 62.4px;
+
+            
+        }
+
+        @include mobile-big {
+            font-size: 40px;
+            line-height: 52px;
+        }
+
+        @include mobile {
+            font-size: 36px;
+            line-height: 46px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+
+        .home-screen__button {
+            font-family: Manrope;
+
+            @include laptop {
+                font-size: 18px;
+            }
+    
+            @include tablet {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @include pc {
+        gap: 45px;
+    }
+
+    @include laptop {
+        gap: 30px;
+    }
+
+    @include tablet {
+        gap: 20px;
+    }
+
+}

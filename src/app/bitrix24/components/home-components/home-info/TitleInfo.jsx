@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import './TitleInfo.scss'
 export default function TitleInfo() {

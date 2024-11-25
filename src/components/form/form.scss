@@ -32,6 +32,10 @@
         color: gray;
         top: 0;
       }
+
+      @include mobile-big {
+        font-size: 14px;
+      }
     }
 
     label {

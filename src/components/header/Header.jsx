@@ -49,7 +49,7 @@ export default function Header() {
         <Link href={"/"} className="header__home" onClick={closeMobileHeader}>
           Gamechanger
         </Link>
-        <Button className="header__calendar" onClick={closeMobileHeader}>
+        <Button className="header__calendar" onClick={closeMobileHeader} popup="calendar">
           Связаться с руководством
         </Button>
         <button

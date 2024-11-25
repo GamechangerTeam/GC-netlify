@@ -5,6 +5,10 @@ import "@/styles/general.scss";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import SegmentsPopup from "@/components/modals/segments/SegmentsPopup";
+import ContactUs from "@/components/modals/ContactUs/ContactUs";
+import Cases from "@/components/modals/cases/Cases";
+import CalendarPopup from "@/components/modals/calendar/Calendar";
+import AnimatedBackground from "@/components/animatedBackground/AnimatedBackground";
 
 const manrope = Manrope({
   subsets: ["latin"], // Выберите нужные наборы символов
@@ -20,7 +24,10 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <SegmentsPopup/>
-        
+        <ContactUs/>
+        <Cases/>
+        <CalendarPopup/>
+        <AnimatedBackground/>
       </body>
     </html>
   );

@@ -6,8 +6,7 @@ import "./segmentsPopup.scss";
 import Image from "next/image";
 import Link from "next/link";
 export default function SegmentsPopup() {
-  const { isOpen, closePopup, name } = useModal();
-  const isModalOpen = isOpen && name === "segments" ? "active" : "";
+  const {closePopup } = useModal();
 
   const segments = [
     {
@@ -73,7 +72,7 @@ export default function SegmentsPopup() {
   ];
 
   return (
-    <Popup className={`${isModalOpen} segments`}>
+    <Popup className="segments" popupName="segments">
       <div className="segments__header">
         <button className="close_popup" onClick={closePopup}>
           <Image

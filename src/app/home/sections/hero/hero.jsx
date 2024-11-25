@@ -1,8 +1,6 @@
-"use client";
 import Image from "next/image";
 import React from "react";
 import "./hero.scss";
-import VideoLogo from "@/components/Video";
 import ButtonText from "@/components/ui/Button-text";
 
 export default function Hero() {
@@ -18,7 +16,7 @@ export default function Hero() {
         </p>
         <div className="hero__btns">
           <ButtonText>Сертификаты</ButtonText>
-          <ButtonText>Заказать звонок</ButtonText>
+          <ButtonText popup="contactUs">Заказать звонок</ButtonText>
         </div>
         <p className="hero__description">
           Gamechanger ТОО предлагает <br />

@@ -20,6 +20,12 @@
 
     .close_popup {
       height: fit-content;
+      background: none;
+      border-radius: 50%;
+      border: none;
+      img {
+        border-radius: 50%;
+      }
     }
 
     @include tablet-big {
@@ -29,14 +35,12 @@
     }
 
     @include tablet {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
         font-size: 32px;
       }
-
-
     }
   }
 
