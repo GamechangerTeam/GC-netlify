@@ -1,0 +1,56 @@
+@import "@/styles/mixins";
+@import "@/styles/typography";
+@import "@/styles/variables";
+.bitrix-task__container {
+    display: flex;
+    gap: 20px;
+ justify-content: center ;
+    width: 100%;
+    @include tablet {
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
+    @include mobile-big {
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    
+}
+.bitrix-task-left {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 20px;
+  max-width: 535px;
+  flex: 1;
+display: grid;
+grid-template-rows: auto 1fr;
+gap: 20px;
+// @include tablet-big {
+      
+// }
+@include mobile-big  {
+gap: 16px;
+}
+}
+.bitrix-task-right {
+  flex: 1;
+  //   display: flex;
+  //   flex-direction: column;
+  
+  //  display: flex;
+  //  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 24px;
+justify-content: space-between;
+max-width: 535px;
+    @include pc{
+      // gap:15px
+    }
+    @include mobile-big {
+      gap: 16px;
+    }
+   
+}

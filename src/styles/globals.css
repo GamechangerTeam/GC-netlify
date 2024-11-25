@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-family: var(--manrope), sans-serif;
+  color: white;
+}
+
+main {
+  padding-top: 110px;
+}
+
+@media (max-width: 1024px) {
+  
+}
+
+body {
+  background-image: url("/images/bg-1.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+button, a, input[type=file] {
+  cursor: pointer;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

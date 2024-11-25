@@ -1,0 +1,55 @@
+@import "@/styles/mixins";
+@import "@/styles/typography";
+@import "@/styles/variables";
+.bitrix-overview__image {
+    position: relative;
+    width: 100%;
+    
+    overflow: hidden;
+    @include tablet {
+        height: 400px;
+    }
+    @include mobile-big {
+        height: 300px;
+    }
+    @include mobile {
+        height: 200px;
+    }
+//     .tasks-image {
+        
+//     position: absolute;
+//     width: 80%;
+//     // height: 100%;
+//     // top: 7%;
+// bottom: -10%;
+// }
+// .mobile-image {
+//     position: absolute;
+//     width: 50%;
+//     // height: 100%;
+//     right: 0;
+//     bottom: -10%;
+// }
+    // height: 100%;
+   .test-tasks {
+    position: absolute;
+    top: 7%;
+    @include break(795px) {
+        transform: scale(1.1);
+    }
+    @include tablet {
+        transform: scale(1);
+    }
+    @include mobile-big {
+        top: -15%;
+        transform: scale(0.8);
+    }
+    @include mobile {
+        top: -40%;
+        transform: scale(0.6);
+    }
+    @include mobile-min {
+        top: -35%;
+    }
+   }
+}

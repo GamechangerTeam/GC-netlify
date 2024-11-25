@@ -1,0 +1,152 @@
+@import "@/styles/mixins";
+@import "@/styles/typography";
+@import "@/styles/variables";
+
+.heroSegment {
+  .container {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  h1 {
+    font-size: 100px;
+    line-height: 130px;
+    br {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+  p {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  &__img-wrapper {
+    position: absolute;
+    top: 0;
+    right: 64px;
+    background: $card-color;
+    border-radius: 4px;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-content: center;
+    padding: 12px;
+  }
+
+  img {
+    mix-blend-mode: screen;
+  }
+  @include pc {
+    &__img-wrapper {
+      max-width: 350px;
+      right: 32px;
+    }
+  }
+  @include break(1310px) {
+    &__img-wrapper {
+      max-width: 300px;
+    }
+  }
+
+  @include break(1260px) {
+    .container {
+      padding-top: 60px;
+    }
+    &__img-wrapper {
+      max-width: 250px;
+    }
+  }
+  @include laptop {
+    .container {
+      padding-top: 0;
+    }
+    h1 {
+      font-size: 72px;
+      line-height: 94px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  @include tablet-big {
+    .container {
+      padding-top: 60px;
+    }
+    &__img-wrapper {
+      max-width: 200px;
+    }
+  }
+  @include tablet {
+    .container {
+      padding-top: 0;
+    }
+    h1 {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    &__img-wrapper {
+      max-width: 200px;
+      right: 24px;
+    }
+  }
+
+  @include break(650px) {
+    .container {
+      padding-top: 60px;
+    }
+    &__img-wrapper {
+      max-width: 150px;
+    }
+  }
+  @include mobile-big {
+    .container {
+      padding-top: 0;
+      gap: 20px;
+    }
+    &__img-wrapper {
+      position: static;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 40px;
+      line-height: 44px;
+      br {
+        &:first-child {
+          display: none;
+        }
+
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @include mobile {
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 18px;
+      line-height: normal;
+      br {
+        display: none;
+      }
+    }
+  }
+
+  @include mobile-min {
+    h1 {
+      font-size: 32px;
+    }
+  }
+}

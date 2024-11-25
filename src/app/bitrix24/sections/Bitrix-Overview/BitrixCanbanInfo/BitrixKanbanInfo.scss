@@ -1,0 +1,53 @@
+@import "@/styles/mixins";
+@import "@/styles/typography";
+@import "@/styles/variables";
+.bitrix-canban__container {
+    margin-top: 120px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column ;
+
+ justify-content: center     ;
+    width: 100%;
+    
+}
+.bitrix-canban__top {
+
+    gap: 20px;
+    justify-content: center;
+display: flex;
+@include tablet {
+    flex-direction: column;
+    align-items: center;
+}
+    
+   
+    
+}
+.bitrix-canban__bottom {
+
+width: 100%;
+max-width: 1090px;
+
+align-self: center;
+
+@include tablet {
+    max-width: 535px;
+}
+   
+ }
+.bitrix-canban__left {
+    max-width: 535px;
+    flex: 1; 
+    div {
+        height: 100%;
+            }
+}
+.bitrix-canban__right {
+    flex: 1; 
+    max-width: 535px;
+    div {
+height: 100%;
+    }
+
+}

@@ -1,0 +1,106 @@
+@import "variables";
+
+// #region BREAKPOINTS
+@mixin break($size) {
+  @media (max-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin breakMin($size) {
+  @media (min-width: #{$size}) {
+    @content;
+  }
+}
+
+@mixin break-height($size) {
+  @media (max-height: #{$size}) {
+    @content;
+  }
+}
+
+@mixin pc() {
+  @include break(1440px) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @include break(1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-big() {
+  @include break(960px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @include break(768px) {
+    @content;
+  }
+}
+
+@mixin mobile-big() {
+  @include break(525px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 426px) {
+    @content;
+  }
+}
+
+@mixin mobile-mid {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin mobile-min {
+  @media (max-width: 350px) {
+    @content;
+  }
+}
+
+// #endregion
+
+@mixin button {
+  background: #ffffff0f;
+  position: relative;
+  padding: 12px 24px;
+  font-size: 14px;
+  border: none;
+  border-radius: 100px;
+  line-height: normal;
+  color: $white;
+}
+
+@mixin buttonText {
+  font-size: 20px;
+  color: $white;
+  padding: 12px 0;
+  position: relative;
+  background: none;
+  border: none;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 1px;
+    background: $main;
+    transition: 0.3s ease;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}
