@@ -10,6 +10,7 @@ export default function HomeScreen() {
       </h1>
       <div className="home-screen__buttons">
         <ButtonText className={"home-screen__button"}>Сертификаты</ButtonText>
+
         <ButtonText className={"home-screen__button"}>
           Заказать звонок
         </ButtonText>

@@ -18,6 +18,8 @@
   --main: #d3c879;
   --XS: 14px;
   --XXS: 12px;
+  /* --rdp-accent-color: indigo;  */
+  /* --rdp-accent-background-color: #cc0000;  */
 }
 
 * {
@@ -63,4 +65,10 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+
+.rdp {
+
+  /* Add more CSS variables here. */
 }

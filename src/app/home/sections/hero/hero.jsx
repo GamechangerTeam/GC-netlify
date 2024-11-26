@@ -28,43 +28,8 @@ export default function Hero() {
           сопровождение 24/7.
         </p>
         <div className="hero__video-wrapper">
-          <div className="video_wrapper">
-            <Image
-              src={"/images/Logo_preloader.png"}
-              alt="asd"
-              width={100}
-              height={100}
-            />
-            {/* <Image
-              src={"/video/Logo.gif"}
-              alt="asd"
-              width={100}
-              height={100}
-            /> */}
-            {/* <VideoLogo/> */}
-            {/* <video
-              className="hero__video"
-              id="video"
-              autoPlay
-              loop
-              muted
-              playsInline
-            >
-              <source src="/video/lol.mp4" type="video/mp4" />
-              Ваш браузер не поддерживает видео. 
-              
-            </video> */}
-            {/* <video
-            autoplay
-            muted
-            playsinline
-            loop
-            className="hero__video-wrapper__video"
-            id="video"
-          >
-          <source src="https://dl.dropbox.com/scl/fi/e83xkaz17u5sxz5wgunb1/Logo-animated.mp4?rlkey=0uauqncvbselkgfc3yyk4vcti&amp;st=d3qiontx&amp;dl=0" type="video/mp4"> 
-          </video> */}
-          </div>
+        <Image src={"/video/Logo-2.gif"} alt="asd" width={400} height={400} />
+          {/* <div className="video_wrapper"></div> */}
         </div>
       </div>
     </div>
