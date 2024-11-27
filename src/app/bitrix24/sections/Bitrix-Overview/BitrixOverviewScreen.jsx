@@ -1,27 +1,21 @@
-"use client"
-import React from 'react'
-import "./BitrixOverviewScreen.scss"
-import MainTitle from '../../components/bitrix-overview-componets/main-title/MainTitle'
-import BitrixTaskInfo from './BitrixTasksInfo/BitrixTaskInfo'
-import BitrixKanbanInfo from './BitrixCanbanInfo/BitrixKanbanInfo'
-import BitrixBusinessInfo from './BitrixBusinessInfo/BitrixBusinessInfo'
-import BitrixCrmInfo from './BitrixCrmInfo/BitrixCrmInfo'
-import BitrixContactInfo from './BitrixContactInfo/BitrixContactInfo'
-import BitrixCrmFormNote from './BitrixCrmFormNote/BitrixCrmFormNote'
-import BitrixCrmFormFeedback from './BitrixCrmFormFeedback/BitrixFormFeedback'
+"use client";
+import React from "react";
+import "./BitrixOverviewScreen.scss";
+import MainTitle from "../../components/bitrix-overview-componets/main-title/MainTitle";
+
+import useBitrixStore from "@/components/hooks/use-bitrix-store";
+import BitrixBlock from "./BitrixBlock/BitrixBlock";
 
 export default function BitrixOverviewScreen() {
+  const bitrixInfo = useBitrixStore((state) => state);
   return (
-    <div className='bitrix-overview__container'>
-        <MainTitle/>
-    <BitrixTaskInfo/>
-    <BitrixKanbanInfo/>
-    <BitrixBusinessInfo/>
-    <BitrixCrmInfo/>
-    <BitrixContactInfo/>
-    <BitrixCrmFormNote/>
-    <BitrixCrmFormFeedback/>
-        </div>
-
-  )
+    <div className="bitrix-overview__container">
+      <MainTitle />
+      {/* <BitrixTaskInfo /> */}
+      {bitrixInfo &&
+        bitrixInfo.map((item, index) => (
+          <BitrixBlock key={index} data={item} />
+        ))}
+    </div>
+  );
 }

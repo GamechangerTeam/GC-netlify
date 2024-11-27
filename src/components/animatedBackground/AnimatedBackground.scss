@@ -27,6 +27,8 @@ $delay-time: 1s;
   .remove {
     opacity: 0;
     animation: fadeIn $animation-time linear forwards;
+    filter: blur(10px);
+    scale: 1.4;
   }
   
   .picture-3 {

@@ -2,9 +2,12 @@
 @import "@/styles/typography";
 @import "@/styles/variables";
 .bitrix-overview__container {
-    padding-top: 120px;
-    // padding-left: 111px;
-    @include mobile-big {
-        padding-top: 68px;
-    }
+  padding-top: 120px;
+  // padding-left: 111px;
+  @include tablet {
+    padding-top: 60px;
+  }
+  @include mobile-big {
+    padding-top: 48px;
+  }
 }

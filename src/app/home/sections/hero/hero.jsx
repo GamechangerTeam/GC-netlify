@@ -28,7 +28,7 @@ export default function Hero() {
           сопровождение 24/7.
         </p>
         <div className="hero__video-wrapper">
-        <Image src={"/video/Logo-2.gif"} alt="asd" width={400} height={400} />
+        <Image src={"/video/Logo-big.gif"} alt="asd" width={400} height={400} />
           {/* <div className="video_wrapper"></div> */}
         </div>
       </div>
