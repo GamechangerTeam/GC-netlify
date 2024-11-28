@@ -8,12 +8,13 @@ export default function ButtonText({
   active,
   disabled,
   popup,
+  videoSrc
 }) {
   const { openPopup } = useModal();
 
   const handleClick = () => {
     if (popup) {
-      openPopup(popup);
+      openPopup(popup, videoSrc);
     }
     if (onClick) {
       onClick();

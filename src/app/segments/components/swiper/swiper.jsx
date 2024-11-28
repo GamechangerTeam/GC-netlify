@@ -2,7 +2,6 @@
 import React from "react";
 // swiper
 import { Navigation, Pagination } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,7 +11,7 @@ import Image from "next/image";
 import "./swiper.scss";
 import ButtonText from "@/components/ui/Button-text";
 
-export default function Segments_swiper({ id, data }) {
+export default function Segments_swiper({ id, data, autoHeight }) {
   const changeBulletWrapper = (e) => {
     // document.documentElement.style.setProperty(
     //   "--active-swiper-slide",
@@ -35,8 +34,7 @@ export default function Segments_swiper({ id, data }) {
     id,
     slidesPerView: 1,
     spaceBetween: 16,
-    // allowTouchMove: false,
-    autoHeight: true,
+    autoHeight: autoHeight,
     speed: "500",
     navigation: {
       nextEl: `.swiper-button-next-${id}`,
@@ -92,7 +90,7 @@ export default function Segments_swiper({ id, data }) {
                 <span className="segments-swiper__price">{item.price[1]}</span>
               </div>
 
-              <ButtonText className="segments-swiper__order-btn">
+              <ButtonText className="segments-swiper__order-btn" popup="contactUs">
                 Заказать
               </ButtonText>
             </div>
@@ -105,7 +103,7 @@ export default function Segments_swiper({ id, data }) {
             >
               <p className="segments-swiper__days">{item.days}</p>
               <span className="segments-swiper__price">{item.price}</span>
-              <ButtonText className="segments-swiper__order-btn">
+              <ButtonText className="segments-swiper__order-btn"  popup="contactUs">
                 Заказать
               </ButtonText>
             </div>

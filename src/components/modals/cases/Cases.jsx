@@ -318,7 +318,7 @@ export default function Cases() {
               {item.list.map((listItem, listIndex) => (
                 <span key={listIndex}>
                   <Image
-                    src="https://static.tildacdn.com/tild3431-3932-4361-a535-306435343332/confirm.svg"
+                    src="/icons/accept.svg"
                     alt="confirm svg logo"
                     loading="lazy"
                     width={20}

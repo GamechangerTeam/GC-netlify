@@ -1,6 +1,7 @@
 import React from "react";
 import "./section2.scss";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 export default function Section2() {
   return (
     <div className="section2" id="section2">
@@ -19,13 +20,13 @@ export default function Section2() {
 
         <ul className="section2__list">
           <li className="section2__card">
-            <button className="open_popup" data-popup="form">
+            <Button className="open_popup" popup="contactUs">
               <div className="section2__card__header">
                 Управление <span className="gold_text">продажами</span>
               </div>
               <div className="section2__card__footer">
                 <span>
-                  от
+                  от{" "}
                   <span className="section2__card__price">150&nbsp;000т</span>
                 </span>
                 <Image
@@ -35,16 +36,16 @@ export default function Section2() {
                   height={22}
                 />
               </div>
-            </button>
+            </Button>
           </li>
           <li className="section2__card">
-            <button className="open_popup" data-popup="form">
+            <Button className="open_popup" popup="contactUs">
               <div className="section2__card__header">
                 Управление <span className="gold_text">предприятием</span>
               </div>
               <div className="section2__card__footer">
                 <span>
-                  от
+                  от{" "}
                   <span className="section2__card__price">250&nbsp;000т</span>
                 </span>
                 <Image
@@ -54,16 +55,17 @@ export default function Section2() {
                   height={22}
                 />
               </div>
-            </button>
+            </Button>
           </li>
+
           <li className="section2__card">
-            <button className="open_popup" data-popup="form">
+            <Button className="open_popup" popup="contactUs">
               <div className="section2__card__header">
                 Управление <span className="gold_text">платежами</span>
               </div>
               <div className="section2__card__footer">
                 <span>
-                  от
+                  от{" "}
                   <span className="section2__card__price">100&nbsp;000т</span>
                 </span>
                 <Image
@@ -73,10 +75,10 @@ export default function Section2() {
                   height={22}
                 />
               </div>
-            </button>
+            </Button>
           </li>
           <li className="section2__card">
-            <button className="open_popup" data-popup="segment">
+            <Button className="open_popup" popup="segments">
               <div className="section2__card__header">
                 Посмотреть <span className="gold_text">пакеты</span>
               </div>
@@ -90,7 +92,7 @@ export default function Section2() {
                   height={22}
                 />
               </div>
-            </button>
+            </Button>
           </li>
         </ul>
       </div>

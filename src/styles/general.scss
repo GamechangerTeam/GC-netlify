@@ -84,6 +84,8 @@
     // display: flex;
     // flex-direction: column;
     // justify-content: center;
+
+
     @include breakMin(1440px) {
       padding: 32px;
     }

@@ -9,18 +9,18 @@ export default function Button({
   active,
   disabled,
   popup,
+  videoSrc,
 }) {
   const { openPopup } = useModal();
   const handleClick = () => {
-
-    if (popup) {
-      console.log(popup);
-      
-      openPopup(popup);
-    }
-
     if (onClick) {
       onClick();
+    }
+    // if (videoSrc) {
+    //   return openVideoPopup(popup, videoSrc);
+    // }
+    if (popup) {
+     openPopup(popup, videoSrc);
     }
   };
 

@@ -19,7 +19,9 @@ export default function Section3() {
             услуги другим!
           </p>
           <div className="section3__footer__btns">
-            <ButtonText>Отзывы</ButtonText>
+            <ButtonText popup="video-popup" videoSrc="/video/reviews/WhyCook.mp4">
+              Отзывы
+            </ButtonText>
             <ButtonText popup="cases">Кейсы</ButtonText>
           </div>
         </div>

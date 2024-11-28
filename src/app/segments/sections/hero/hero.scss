@@ -23,29 +23,26 @@
     line-height: 42px;
   }
 
-  &__img-wrapper {
+  &__bitrix-logo {
     position: absolute;
     top: 0;
     right: 64px;
-    background: $card-color;
     border-radius: 4px;
     aspect-ratio: 1/1;
     display: grid;
     place-content: center;
     padding: 12px;
+    z-index: -1;
   }
 
-  img {
-    mix-blend-mode: screen;
-  }
   @include pc {
-    &__img-wrapper {
+    &__bitrix-logo {
       max-width: 350px;
       right: 32px;
     }
   }
   @include break(1310px) {
-    &__img-wrapper {
+    &__bitrix-logo {
       max-width: 300px;
     }
   }
@@ -54,7 +51,7 @@
     .container {
       padding-top: 60px;
     }
-    &__img-wrapper {
+    &__bitrix-logo {
       max-width: 250px;
     }
   }
@@ -76,7 +73,7 @@
     .container {
       padding-top: 60px;
     }
-    &__img-wrapper {
+    &__bitrix-logo {
       max-width: 200px;
     }
   }
@@ -89,7 +86,7 @@
       line-height: 60px;
     }
 
-    &__img-wrapper {
+    &__bitrix-logo {
       max-width: 200px;
       right: 24px;
     }
@@ -99,7 +96,7 @@
     .container {
       padding-top: 60px;
     }
-    &__img-wrapper {
+    &__bitrix-logo {
       max-width: 150px;
     }
   }
@@ -108,7 +105,7 @@
       padding-top: 0;
       gap: 20px;
     }
-    &__img-wrapper {
+    &__bitrix-logo {
       position: static;
       max-width: 300px;
       margin: 0 auto;

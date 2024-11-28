@@ -26,7 +26,7 @@ export default function Section7() {
               <span className="gold_text">приобрести систему</span> или
               отказаться.
             </p>
-            <Button>Испытать систему</Button>
+            <Button popup="contactUs">Испытать систему</Button>
           </div>
         </div>
       </div>

@@ -11,9 +11,9 @@ export default function Order() {
         </h2>
         <p> 
           На комплексные решения располагаются{" "}
-          <span className="gold_text">cкидки до 40%</span>
+          <span className="gold_text">скидки до 40%</span>
         </p>
-        <Button>Индивидуальное решение</Button>
+        <Button popup="contactUs">Индивидуальное решение</Button>
       </div>
     </div>
   );

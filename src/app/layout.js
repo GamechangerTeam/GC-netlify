@@ -9,6 +9,8 @@ import ContactUs from "@/components/modals/ContactUs/ContactUs";
 import Cases from "@/components/modals/cases/Cases";
 import CalendarPopup from "@/components/modals/calendar/Calendar";
 import AnimatedBackground from "@/components/animatedBackground/AnimatedBackground";
+import Certificates from "@/components/modals/certificates/Сertificates";
+import VideoPopup from "@/components/modals/VideoPopup/VideoPopup";
 
 const manrope = Manrope({
   subsets: ["latin"], // Выберите нужные наборы символов
@@ -28,6 +30,8 @@ export default function RootLayout({ children }) {
         <Cases/>
         <CalendarPopup/>
         <AnimatedBackground/>
+        <Certificates/>
+        <VideoPopup/>
       </body>
     </html>
   );

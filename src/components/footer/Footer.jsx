@@ -1,24 +1,40 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import "./footer.scss";
 import Image from "next/image";
 import Input from "../ui/Input";
+import ButtonText from "../ui/Button-text";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+
+  const sendEmail = () => {
+    console.log(email);
+    
+  };
   return (
-    <footer className="footer">
+    <footer className="footer" id="footer">
       <div className="container">
         <div className="footer__links footer__wrapper">
           <a href="#" className="footer__links--home">
             Gamechanger
           </a>
-          <button className="open_popup" data-popup="segment">
+
+          <ButtonText className="open_popup" popup="segments">
             Выбрать нишу
-          </button>
-          <a href="/bitrix24"> Обзор Битрикс24 </a>
-          <a href="#popup:rewiews" className="footer__links--reviews">
-            Отзывы
+          </ButtonText>
+
+          <a href="/bitrix24" className="open_popup">
+            {" "}
+            Обзор Битрикс24{" "}
           </a>
+          <ButtonText
+            className="open_popup"
+            popup="video-popup"
+            videoSrc="/video/reviews/WhyCook.mp4"
+          >
+            Отзывы
+          </ButtonText>
         </div>
         <div className="footer__info footer__wrapper">
           <p>ТОО &quot;Gamechanger&quot;</p>
@@ -35,8 +51,9 @@ export default function Footer() {
             className="footer__input"
             id="email"
             text="Email"
+            onChange={(e) => setEmail(e.target.value)}
           >
-            <button onClick={() => console.log("asdsadads")}>
+            <button onClick={sendEmail}>
               <Image
                 src="/icons/arrow-right.svg"
                 alt="arrow-right icon svg"

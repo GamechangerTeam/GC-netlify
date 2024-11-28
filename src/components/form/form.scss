@@ -56,7 +56,10 @@
 
     &--file {
       label {
-        left: 42px;
+        left: 42px !important;
+        @include tablet {
+          left: 32px !important;
+        }
       }
       img {
         position: absolute;

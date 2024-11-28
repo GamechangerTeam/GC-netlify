@@ -3,7 +3,7 @@ import React from "react";
 import Segments_swiper from "../../components/swiper/swiper";
 import "./card.scss";
 
-export default function Card({ data, cardId, swiperId }) {
+export default function Card({ data, cardId, swiperId, autoHeight }) {
   return (
     <div className="container">
       <div className="card" id={cardId}>
@@ -38,7 +38,7 @@ export default function Card({ data, cardId, swiperId }) {
             </button>
           </div>
         </div>
-        <Segments_swiper className="card__swiper" id={swiperId} data={data} />
+        <Segments_swiper className="card__swiper" id={swiperId} data={data} autoHeight={autoHeight} />
       </div>
     </div>
   );

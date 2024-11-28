@@ -3,6 +3,14 @@
 @import "@/styles/variables";
 
 .segments {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet {
+      display: block;
+    }
+  }
   &__header {
     display: grid;
     grid-template: auto / 64px 1fr;

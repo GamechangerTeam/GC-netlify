@@ -14,7 +14,11 @@ export default function BitrixOverviewScreen() {
       {/* <BitrixTaskInfo /> */}
       {bitrixInfo &&
         bitrixInfo.map((item, index) => (
-          <BitrixBlock key={index} data={item} />
+          <BitrixBlock
+            key={index}
+            data={item}
+            id={`bitrix-block__${index + 1}`}
+          />
         ))}
     </div>
   );

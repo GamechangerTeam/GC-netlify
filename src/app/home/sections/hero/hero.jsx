@@ -15,7 +15,7 @@ export default function Hero() {
           От признанного <span className="gold_text">золотого партнера</span>
         </p>
         <div className="hero__btns">
-          <ButtonText>Сертификаты</ButtonText>
+          <ButtonText popup="certificates">Сертификаты</ButtonText>
           <ButtonText popup="contactUs">Заказать звонок</ButtonText>
         </div>
         <p className="hero__description">
@@ -27,10 +27,15 @@ export default function Hero() {
           <span className="gold_text">бесплатное</span>
           сопровождение 24/7.
         </p>
-        <div className="hero__video-wrapper">
-        <Image src={"/video/Logo-big.gif"} alt="asd" width={400} height={400} />
+          <Image
+            src={"/video/Logo-new.gif"}
+            alt="asd"
+            width={500}
+            height={500}
+            className="hero__logo"
+          />
+          {/* <Image src={"/video/Logo-big.gif"} alt="asd" width={400} height={400} /> */}
           {/* <div className="video_wrapper"></div> */}
-        </div>
       </div>
     </div>
   );

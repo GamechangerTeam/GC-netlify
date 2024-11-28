@@ -2,15 +2,12 @@
 @import "@/styles/typography";
 @import "@/styles/variables";
 
-
-
-
 .header {
   position: fixed;
   width: 100%;
   z-index: 10;
   transition: 0.5s ease;
-  height: 100px;
+  height: 91px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   will-change: backdrop-filter;
@@ -20,7 +17,7 @@
     display: flex;
     gap: 54px;
     align-items: center;
-    padding: 32px;
+    padding: 24px 32px;
   }
 
   &__home {
@@ -43,29 +40,28 @@
     align-items: center;
     li {
       font-size: 14px;
-      padding: 12px 0;
       position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50%;
-        height: 1px;
-        transition: 0.5s ease;
-        background: $main;
-      }
-      &:last-child {
-        &::before {
-          content: none;
-        }
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 0;
+      //   width: 50%;
+      //   height: 1px;
+      //   transition: 0.5s ease;
+      //   background: $main;
+      // }
+      // &:last-child {
+      //   &::before {
+      //     content: none;
+      //   }
+      // }
 
-      &:hover {
-        &::before {
-          width: 100%;
-        }
-      }
+      // &:hover {
+      //   &::before {
+      //     width: 100%;
+      //   }
+      // }
     }
     button {
       background: none;
@@ -179,15 +175,6 @@
     }
   }
 
-  &__popup {
-    position: fixed;
-    top: 100px;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh - 100px);
-    // backdrop-filter: blur(80px);
-  }
-
   @include pc {
     .container,
     ul {
@@ -198,9 +185,10 @@
   @include laptop() {
     transition: 0.5s ease;
     transition-delay: 0.2s;
+    height: 88px;
 
     .container {
-      padding: 24px;
+      padding: 16px 24px;
     }
     &__burger {
       display: block;
@@ -208,19 +196,26 @@
 
     ul {
       position: absolute;
-      left: 0;
-      top: 50%;
+      left: 24px;
+      top: 10%;
       flex-direction: column;
       opacity: 0;
       transition: 0.5s ease;
       visibility: hidden;
-      width: 100%;
-      transform: translateY(-50%);
+      width: fit-content;
+      align-items: flex-start;
+      li {
+        font-size: 20px;
+        button {
+          font-size: 20px;
+        }
+      }
     }
 
     &__whatsapp {
-      font-size: 24px;
-      padding: 12px 48px;
+      font-size: 20px;
+      padding: 0;
+      background: none;
     }
     &.active {
       height: 100vh;
@@ -229,7 +224,7 @@
         opacity: 1;
         visibility: visible;
         transition-delay: 0.3s;
-        top: 50vh;
+        top: 100px;
       }
     }
   }
@@ -246,24 +241,35 @@
 
     .header__calendar {
       position: absolute;
-      top: 70px;
+      top: 400px;
       left: 16px;
+      font-size: 20px;
+      padding: 0;
+      background: none;
       width: max-content;
       opacity: 0;
       visibility: hidden;
       transition: 0.5s ease;
     }
 
+    ul {
+      left: 16px;
+    }
+
     &.active {
+      ul {
+        top: 70px;
+      }
       .header__calendar {
         opacity: 1;
         visibility: visible;
         transition-delay: 0.3s;
+        top: 310px;
       }
     }
   }
 
-  @include break-height(500px) {
+  @include break-height(350px) {
     @include laptop {
       ul {
         display: grid;

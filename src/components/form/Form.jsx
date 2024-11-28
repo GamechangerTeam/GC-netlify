@@ -131,7 +131,6 @@ export default function Form(id) {
     } else {
       setSelectedFile("Опишите техническое задание (опционально)");
     }
-    
   };
 
   return (
@@ -178,7 +177,7 @@ export default function Form(id) {
         name="task"
         className="form__wrapper form__wrapper--file"
         text={selectedFile}
-          accept=".png, .jpg, .jpeg, .docx, .pdf"
+        accept=".png, .jpg, .jpeg, .docx, .pdf"
         onChange={(e) => selectFile(e.target.files[0])}
       >
         <Image
@@ -188,67 +187,7 @@ export default function Form(id) {
           height={32}
         />
       </Input>
-      {/* <div className="form__wrapper">
-        <input
-          type="text"
-          name="name"
-          required
-          placeholder=" "
-          onChange={(e) => setName(e.target.value)}
-        />
-        <label htmlFor="name">Введите имя</label>
-      </div> */}
-      {/* <div className="form__wrapper">
-        <input
-          type="number"
-          name="phone"
-          required
-          placeholder=" "
-          onChange={(e) => setPhone(e.target.value)}
-        />
-        <label htmlFor="phone">Введите номер телефона</label>
-      </div> */}
-      {/* <div className="form__wrapper">
-        <input
-          type="text"
-          name="company"
-          placeholder=" "
-          onChange={(e) => setCompany(e.target.value)}
-        />
-        <label>Введите компанию (опционально)</label>
-      </div> */}
-      {/* <div className="form__wrapper">
-        <input
-          type="text"
-          name="segment"
-          placeholder=" "
-          onChange={(e) => setSegment(e.target.value)}
-        />
-        <label htmlFor="segment">Введите нишу (опционально)</label>
-      </div> */}
 
-      {/* <div className="form__wrapper form__wrapper--task">
-        <input
-          type="text"
-          name="task"
-          placeholder=" "
-          onChange={(e) => setTask(e.target.value)}
-        />
-        <label htmlFor="task">Опишите техническое задание (опционально)</label>
-      </div> */}
-
-      {/* <div className="form__wrapper form__wrapper--file">
-        <input
-          type="file"
-          id="section6__file"
-          name="file"
-          onChange={(e) => setFile(e.target.files[0])}
-        />
-        <label htmlFor="task" id="section6__file-label">
-  
-          <span> Вложите техническое задание (опционально)</span>
-        </label>
-      </div> */}
       <div className="form__send-form--wrapper">
         <input
           className="form__send-form"

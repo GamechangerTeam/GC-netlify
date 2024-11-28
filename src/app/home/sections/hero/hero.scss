@@ -8,6 +8,7 @@
     min-height: calc(100svh - 100px);
     display: flex;
     flex-direction: column;
+    position: relative;
 
     @include break-height(600px) {
       min-height: auto;
@@ -30,10 +31,6 @@
     flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 48px;
-  }
-
-  .open_popup {
-    //   @include button-text();
   }
 
   &__description {
@@ -62,56 +59,38 @@
     position: relative;
   }
 
-  &__video-wrapper {
+  &__logo {
     position: absolute;
-    right: 0%;
+    right: 64px;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     aspect-ratio: 1/1;
     // mix-blend-mode: screen;
     // mix-blend-mode: lighten;
-    &__bg {
-      position: absolute;
+
+    img {
+      width: 100%;
     }
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   width: 1px;
-    //   height: 1px;
-    //   border-radius: 50%;
-    //   // box-shadow: 0 0 300px 300px black;
-    //   // z-index: -1;
+    @include tablet-big {
+      max-width: 400px;
+    }
+
+    // @include pc {
+    //   max-width: 500px;
+    //   top: 60%;
     // }
 
-    @include pc {
-      max-width: 500px;
-      top: 60%;
-    }
-
-    @include laptop() {
-      max-width: 400px;
-      top: 60%;
-    }
-    @include break-height(800px) {
-      max-width: 300px;
-      top: 75%;
-    }
-  }
-  video {
-    width: 300px;
-    height: 300px;
-  }
-
-  img {
-    width: 100%;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
+    // @include laptop() {
+    //   max-width: 400px;
+    //   top: 60%;
+    // }
+    // @include break-height(800px) {
+    //   max-width: 300px;
+    //   top: 75%;
+    // }
   }
 
   @include break(900px) {
@@ -137,7 +116,7 @@
       max-width: 100%;
     }
 
-    &__video-wrapper {
+    &__logo {
       position: static;
       transform: unset;
       margin: 50px auto 0;

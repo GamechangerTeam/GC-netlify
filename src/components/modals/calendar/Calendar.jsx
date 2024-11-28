@@ -9,7 +9,18 @@ import { Calendar, DatePicker } from "@/components/ui/calendar";
 
 export default function CalendarPopup() {
   const { closePopup } = useModal();
-  const [date, setDate] = useState(new Date());
+  const [selectedDate, setSelectedDay] = useState({
+    date: 0,
+    day: "",
+    month: 0,
+    year: 0,
+    time: "",
+  });
+
+  const datepickerHandler = ({ year, month, date, day }) => {
+    setSelectedDay((prev) => ({ ...prev, year, month, date, day }));
+    console.log(selectedDate, "aaaa");
+  };
 
   return (
     <Popup className="calendar" popupName="calendar">
@@ -25,7 +36,13 @@ export default function CalendarPopup() {
                 alt="close btn"
               />
             </button>
-            <Image src="/video/Logo.gif" className="calendar__logotype" alt="logotype" width={90} height={90} />
+            <Image
+              src="/video/Logo-new.gif"
+              className="calendar__logotype"
+              alt="logotype"
+              width={90}
+              height={90}
+            />
           </div>
           <div className="calendar__aside__main calendar__box">
             <Image
@@ -69,11 +86,12 @@ export default function CalendarPopup() {
 
         <div className="calendar__main calendar__box">
           <h3>Выберите Дату и Время</h3>
-          <DatePicker className="calendar__date-picker" />
+          <DatePicker
+            className="calendar__date-picker"
+            datepickerHandler={datepickerHandler}
+          />
           <div className="calendar__main__right">
-            <p className="calendar__main__selected-day">
-              Среда, 6 Ноября
-            </p>
+            <p className="calendar__main__selected-day">Среда, 6 Ноября</p>
             <button>02:00</button>
             <button>20:00</button>
             <div>

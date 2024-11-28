@@ -14,7 +14,6 @@
     overflow: hidden;
   }
 
-
   &__top-header {
     display: flex;
     gap: 36px;
@@ -41,7 +40,6 @@
     img {
       border-radius: 50%;
     }
-
   }
 
   ul {
@@ -67,7 +65,7 @@
 
   &__header {
     display: grid;
-    grid-template-columns: 150px auto 1fr;
+    grid-template-columns: 150px 150px 1fr;
     gap: 20px;
     align-items: center;
     h3 {
@@ -121,6 +119,12 @@
       grid-template-columns: auto 1fr;
       align-items: center;
       gap: 10px;
+    }
+  }
+
+  @include tablet {
+    .close_popup {
+      width: 48px;
     }
   }
 }

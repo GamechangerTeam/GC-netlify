@@ -5,12 +5,10 @@ import "./header.scss";
 import Button from "../ui/Button";
 import Link from "next/link";
 import Image from "next/image";
-import { useModal } from "../hooks/use-modal-store";
 import Popup from "../ui/Popup";
 
 export default function Header() {
   const [active, setActive] = useState(false);
-  const { openPopup } = useModal();
   const handleBurger = () => {
     setActive(!active);
   };
@@ -30,17 +28,9 @@ export default function Header() {
     requestAnimationFrame(raf);
 
     return () => {
-      lenis.destroy(); // Очистка для предотвращения утечек памяти
+      lenis.destroy(); 
     };
   }, []);
-
-  const openSegment = () => {
-    openPopup("segments");
-    console.log("asdada");
-    setTimeout(() => {
-      closeMobileHeader();
-    }, 200);
-  };
 
   return (
     <header className={`header  ${active ? "active" : ""}`}>
@@ -49,7 +39,11 @@ export default function Header() {
         <Link href={"/"} className="header__home" onClick={closeMobileHeader}>
           Gamechanger
         </Link>
-        <Button className="header__calendar" onClick={closeMobileHeader} popup="calendar">
+        <Button
+          className="header__calendar"
+          onClick={closeMobileHeader}
+          popup="calendar"
+        >
           Связаться с руководством
         </Button>
         <button
@@ -77,9 +71,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Button className={"none"} popup="segments">
-              Выбрать нишу
-            </Button>
+            <Button popup="segments">Выбрать нишу</Button>
           </li>
           <li>
             <Link href={"/bitrix24"} onClick={closeMobileHeader}>
@@ -87,9 +79,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Button className={"none"} onClick={closeMobileHeader}>
-              Отзывы
-            </Button>
+            <Button onClick={closeMobileHeader} popup="video-popup" videoSrc="/video/reviews/WhyCook.mp4">Отзывы</Button>
           </li>
           <li>
             <a

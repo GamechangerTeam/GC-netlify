@@ -1,5 +1,6 @@
 import React from "react";
 import "./section5.scss";
+import Image from "next/image";
 export default function Section5() {
   return (
     <div className="section5" id="section5">
@@ -7,9 +8,11 @@ export default function Section5() {
         <h2>В каждое внедрение входит</h2>
         <ul className="section5__list">
           <li className="section5__card">
-            <img
-              src="https://static.tildacdn.com/tild3339-6134-4930-b832-363732333235/Group.svg"
-              alt="infinity svg icon"
+            <Image
+              src="/icons/infinity.svg"
+              alt="icon svg"
+              width={64}
+              height={64}
             />
             <p>
               Неограниченное количество полей и автоматических сценариев
@@ -17,26 +20,34 @@ export default function Section5() {
             </p>
           </li>
           <li className="section5__card">
-            <img
-              src="https://static.tildacdn.com/tild6534-3039-4532-b439-663932633831/planning_1.svg"
-              alt="planning svg icon"
+            <Image
+              src="/icons/tasks.svg"
+              alt="icon svg"
+              width={64}
+              height={64}
             />
             <p>
               Индивидуально настроенные панели задач для каждого руководителя
             </p>
           </li>
           <li className="section5__card">
-            <img
-              src="https://static.tildacdn.com/tild3331-3566-4164-b530-313461633365/creativity.svg"
-              alt="creativity svg icon"
+            <Image
+              src="/icons/creativity.svg"
+              alt="icon svg"
+              width={64}
+              height={64}
             />
+
             <p>Полная кастомизация всех рабочих мест под ваши потребности</p>
           </li>
           <li className="section5__card">
-            <img
-              src="https://static.tildacdn.com/tild6662-6363-4662-b333-363130663266/customer-service_1.svg"
-              alt="service svg icon"
+            <Image
+              src="/icons/customer.svg"
+              alt="icon svg"
+              width={64}
+              height={64}
             />
+
             <p>
               Неограниченное количество обращений в службу поддержки в период
               обслуживания

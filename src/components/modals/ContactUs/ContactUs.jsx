@@ -22,7 +22,7 @@ export default function ContactUs() {
         <h2>Свяжитесь с нами</h2>
         <Form />
       </div>
-      <Image src="/images/bitrix-logo.gif" className="contactUs__logo" alt="lox" width={300} height={300} />
+      <Image src="/video/Logo-new.gif" className="contactUs__logo" alt="lox" width={300} height={300} />
     </Popup>
   );
 }

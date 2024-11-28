@@ -1,5 +1,5 @@
-$animation-time: 5s;
-$delay-time: 1s;
+$animation-time: 3s;
+$delay-time: 0s;
 
 .animatedBg {
   width: 100vw;
@@ -9,6 +9,7 @@ $delay-time: 1s;
   top: 0;
   left: 0;
   z-index: -5;
+
   img {
     width: 100%;
     height: 100%;
@@ -17,60 +18,60 @@ $delay-time: 1s;
     top: 0;
     left: 0;
     z-index: -7;
+    filter: blur(10px);
+    transform: scale(2);
   }
-  
+
   .picture-2 {
     opacity: 1;
     z-index: -10;
   }
-  
+
   .remove {
     opacity: 0;
-    animation: fadeIn $animation-time linear forwards;
-    filter: blur(10px);
-    scale: 1.4;
+    // animation: fadeIn $animation-time linear forwards;
   }
-  
+
   .picture-3 {
-    animation-delay: $delay-time + 0s; 
+    animation-delay: $delay-time + 0s !important;
   }
-  
+
   .picture-4 {
-    animation-delay: $delay-time + $animation-time; 
+    animation-delay: $delay-time + $animation-time !important;
   }
-  
+
   .picture-5 {
-    animation-delay: $delay-time + $animation-time * 2; 
+    animation-delay: $delay-time + $animation-time * 2 !important;
   }
-  
+
   .picture-6 {
-    animation-delay: $delay-time + $animation-time * 3; 
+    animation-delay: $delay-time + $animation-time * 3 !important;
   }
-  
+
   .picture-7 {
-    animation-delay: $delay-time + $animation-time * 4; 
+    animation-delay: $delay-time + $animation-time * 4 !important;
   }
-  
+
   .picture-8 {
-    animation-delay: $delay-time + $animation-time * 5; 
+    animation-delay: $delay-time + $animation-time * 5 !important;
   }
-  
+
   .picture-9 {
-    animation-delay: $delay-time + $animation-time * 6; 
+    animation-delay: $delay-time + $animation-time * 6 !important;
   }
-  
+
   .picture-10 {
-    animation-delay: $delay-time + $animation-time * 7; 
+    animation-delay: $delay-time + $animation-time * 7 !important;
   }
-  
+
   .picture-11 {
-    animation-delay: $delay-time + $animation-time * 8; 
+    animation-delay: $delay-time + $animation-time * 8 !important;
   }
-  
+
   .picture-12 {
-    animation-delay: $delay-time + $animation-time * 9; 
+    animation-delay: $delay-time + $animation-time * 9 !important;
   }
-  
+
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -80,4 +81,3 @@ $delay-time: 1s;
     }
   }
 }
-
